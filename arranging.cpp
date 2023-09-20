@@ -13,6 +13,6 @@ int main(){
 	sort(t, t+n);
 	cout << "\nMang t sau khi duoc sap xep: ";
 	for(int i=0;i<n;i++){
-		cout << t[i] << " ";
+		cout << t[n-i-1] << " ";
 	}
 }
