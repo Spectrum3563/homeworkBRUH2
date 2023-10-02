@@ -10,8 +10,8 @@ void menu(){
 }
 int main(){
 	int c, n, ind=0, sum=0;
-	int tmp[100000000];
-	int* t=tmp;
+	vector <int>t;
+	int temp;
 	menu();
 	for(;;){
 		cin >> c;
@@ -22,7 +22,8 @@ int main(){
 			ind+=n;
 			cout << "\nNhap n so nguyen: ";
 			for(int i=0;i<n;i++){
-				cin >> t[i];sum+=t[i];
+				cin >> temp;t.push_back(temp);
+				sum+=temp;
 			}
 		}else if(c==2){
 			cout << "\nMang: ";
@@ -33,7 +34,7 @@ int main(){
 		}else if(c==3){
 			cout << "\nTong phan tu cua mang: " << sum;
 		}else if(c==4){
-			sort(t, t+ind-1);
+			sort(t.begin(), t.end());
 		}
 		cout << "\n1. Nhap n so nguyen\n";
 		cout << "2. Hien thi mang\n";
